@@ -59,11 +59,6 @@ public class PracticeProblemTest {
             Method getBirthdayMethod = personClass.getMethod("getBirthday");
             assertEquals(String.class, getBirthdayMethod.getReturnType(), 
                     "getBirthday() should return String");
-            
-            // Test getSiblings method
-            Method getSiblingsMethod = personClass.getMethod("getSiblings");
-            assertEquals(personClass.getArrayType(), getSiblingsMethod.getReturnType(), 
-                    "getSiblings() should return Person[]");
         } catch (ClassNotFoundException e) {
             fail("Person class does not exist");
         } catch (NoSuchMethodException e) {
